@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cells</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cells.each do |cell| %>
+      <tr>
+        <td><%= cell.title %></td>
+        <td><%= cell.price %></td>
+        <td><%= link_to 'Show', cell %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
