@@ -1,4 +1,22 @@
 ru:
+  cell: "Камера"
+  activerecord:
+    models:
+      user: "Пользователь"
+      product: "Продукция"
+      cell: "Камеры"
+    attributes:
+      product:
+        title: "Название"
+        price: "Цена"
+        actable_type: "Тип продукта"
+  formtastic:
+    :yes: 'Да'
+    :no: 'Нет'
+    :create: 'Создать'
+    :update: 'Изменить'
+    :submit: 'Отправить'
+    :required: 'required'
   active_admin:
     product:
       title: "Название"
@@ -8,8 +26,11 @@ ru:
       dimensions: "Габаритные размеры"
       net_weight: "Вес нетто"
       packed_sizes: "Размеры в упаковке"
+      avatar: "Аватар"
     cells: "Камеры"
+    cell: "Камера"
     catalog: "Каталог"
+    detail: "Подробнее"
     dashboard: "Панель управления"
     dashboard_welcome:
       welcome: "Добро пожаловать в Active Admin. Это стандартная страница управления сайтом."
@@ -18,9 +39,9 @@ ru:
     edit: "Изменить"
     delete: "Удалить"
     delete_confirmation: "Вы уверены, что хотите удалить это?"
-    new_model: "Создать %{model}"
-    edit_model: "Изменить %{model}"
-    delete_model: "Удалить %{model}"
+    new_model: "Создать"
+    edit_model: "Изменить"
+    delete_model: "Удалить"
     details: "%{model} подробнее"
     cancel: "Отмена"
     empty: "Пусто"
@@ -150,3 +171,5 @@ ru:
       blog: "Блог"
     resources:
       offer:
+  created_at: "Создано"
+  updated_at: "Обновлено"
