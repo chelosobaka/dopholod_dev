@@ -34,6 +34,10 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+group :production do
+  gem 'pg', '~> 0.21'
+end
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.6'
@@ -68,3 +72,4 @@ gem 'rails-i18n'
 gem 'active_record-acts_as'
 gem 'carrierwave', '~> 1.0'
 gem 'active_admin_theme'
+gem 'twitter-bootstrap-rails'

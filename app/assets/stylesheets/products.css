@@ -1,0 +1,69 @@
+.product-container{
+  padding: 20px;
+}
+
+.product-item{
+  border: 4px solid #f5f5f5;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.model-title{
+  color: #1a273e;
+  font-family: 'Russo One', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.product-image{
+  text-align: center;
+}
+
+.product-title{
+  font-family: 'Russo One', sans-serif;
+}
+
+.product-title>h3>a{
+  color: #494c5b;
+  text-decoration: none;
+}
+
+.product-title>h3>a:hover{
+  text-decoration: underline;
+
+}
+
+.product-table{
+  color: #1a273e;
+  font-family: 'Arsenal', sans-serif;
+}
+
+.link-to-detail{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: -20px;
+}
+
+.link-to-detail>a{
+  display:block;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #1a273e;
+  font-weight: 400px;
+  font-size: 20px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.link-to-detail:hover{
+  display:block;
+  cursor: pointer;
+  background-color: #ffce26 !important;
+}

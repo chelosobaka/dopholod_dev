@@ -1,0 +1,41 @@
+.nav{
+  position:fixed;
+  max-width: 16.6%;
+  min-width: 16.6%;
+  background: #f5f5f5;
+  height: 100%;
+}
+
+.brand{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.brand-link{
+  text-decoration: none;
+}
+
+.brand-link img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-link{
+  text-align: center;
+}
+
+.nav>li>a{
+  text-transform: uppercase;
+  color: #1a273e;
+  text-decoration: none;
+  font-weight: 400px;
+  font-size: 25px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.nav>li>a:hover{
+  background-color: #ffce26 !important;
+}
+

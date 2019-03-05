@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
-    <title>DopholodDev</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "DopholodDev" %></title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <%= javascript_include_tag "application" %>
+
+    <!-- left menu -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
+    <!-- model title -->
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
   </head>
-
   <body>
-    
-    <%= yield %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 nopadding">
+          <%= render 'layouts/navbar' %>
+        </div><!-- /col-md-2 -->
+        <div class="col-md-10">
+            <%= yield %>
+        </div><!-- /col-md-10 -->
+      </div><!-- /row -->
+
+      <footer>
+        <p>&copy; Company 2019</p>
+      </footer>
+
+    </div> <!-- /container -->
+
   </body>
 </html>

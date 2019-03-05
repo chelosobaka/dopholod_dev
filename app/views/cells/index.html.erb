@@ -1,6 +1,42 @@
-<h1>События</h1>
+<div class="product-container">
+  <div class="model-title">
+    <h1>Холодильные камеры</h1>
+  </div><!-- /title -->
 
-<div class="row buffer-bottom">
-  <%# Рендерим сразу массив событий, каждый в паршиале 'events/event' %>
+  <% @cells.each do |cell| %>
+    <div class="col-md-3">
+      <div class="product-item">
+        <div class="product-image">
+          <%= image_tag(cell.avatar.url, size: "200x250") if cell.avatar? %>
+        </div><!-- /product-image -->
 
+        <div class="product-title">
+          <h3><%=link_to cell.title, cell_path(cell.id) %></h3>
+        </div><!-- /cproduct-title -->
+
+        <div class="product-table">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row">Объем, м3</th>
+                <td><%= cell.space %></td>
+              </tr>
+              <tr>
+                <th scope="row">Диапазон температуры окружающего воздуха, °C</th>
+                <td><%= cell.temperature_range %></td>
+              </tr>
+              <tr>
+                <th scope="row">Цена, руб. с НДС</th>
+                <td><%= cell.price %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- /product-table -->
+
+        <div class="link-to-detail">
+          <%=link_to "Подробнее", cell_path(cell.id)%>
+        </div><!-- /link-to-detail -->
+      </div><!-- /product-item -->
+    </div><!-- /col-md-3 -->
+  <% end %>
 </div>

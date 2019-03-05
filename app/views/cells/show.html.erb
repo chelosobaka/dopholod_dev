@@ -1,37 +1,33 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Temperature range:</strong>
-  <%= @cell.temperature_range %>
-</p>
-<p>
-  <strong>title:</strong>
-  <%= @cell.title %>
-</p>
-
-<p>
-  <strong>Space:</strong>
-  <%= @cell.space %>
-</p>
-
-<p>
-  <strong>Dimensions:</strong>
-  <%= @cell.dimensions %>
-</p>
-
-<p>
-  <strong>Net weight:</strong>
-  <%= @cell.net_weight %>
-</p>
-
-<p>
-  <strong>Packed sizes:</strong>
-  <%= @cell.packed_sizes %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @cell.id %>
-</p>
-
-<%= link_to 'Back', cells_path %>
+<div >
+  <div class="col-md-2">
+    <%= image_tag(@cell.avatar.url, size: "260x380") if @cell.avatar? %>
+  </div>
+  <div class="col-md-10">
+    <div class="product-table">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th scope="row">Объем, м3</th>
+            <td><%= @cell.space %></td>
+          </tr>
+          <tr>
+            <th scope="row">Диапазон температуры окружающего воздуха, °C</th>
+            <td><%= @cell.temperature_range %></td>
+          </tr>
+          <tr>
+            <th scope="row">Диапазон температуры окружающего воздуха, °C</th>
+            <td><%= @cell.temperature_range %></td>
+          </tr>
+          <tr>
+            <th scope="row">Диапазон температуры окружающего воздуха, °C</th>
+            <td><%= @cell.temperature_range %></td>
+          </tr>
+          <tr>
+            <th scope="row">Цена, руб. с НДС</th>
+            <td><%= @cell.price %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /product-table -->
+  </div>
+</div>
