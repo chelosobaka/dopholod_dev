@@ -7,19 +7,23 @@
 }
 
 .brand{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 200px;
-}
-
-.brand-link{
-  text-decoration: none;
-}
-
-.brand-link img{
   display: block;
+  margin-bottom: 25px;
+  font-size: 40px;
+  text-align: center;
+  display: block;
+  color: #1a273e;
+  font-family: 'Russo One', sans-serif;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
+
+}
+
+
+.brand>a{
+  color: #1a273e;
+  text-decoration: none;
 }
 
 .nav-link{
