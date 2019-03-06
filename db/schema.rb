@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_27_005711) do
+ActiveRecord::Schema.define(version: 2019_03_05_233031) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -48,6 +48,18 @@ ActiveRecord::Schema.define(version: 2019_02_27_005711) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "monoblocks", force: :cascade do |t|
+    t.string "refrigerant"
+    t.string "temperature_condition"
+    t.string "voltage"
+    t.float "power_usage"
+    t.integer "net_weight"
+    t.string "dimensions"
+    t.string "packed_sizes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "title"
     t.integer "price"
@@ -57,6 +69,18 @@ ActiveRecord::Schema.define(version: 2019_02_27_005711) do
     t.datetime "updated_at", null: false
     t.string "avatar"
     t.index ["actable_type", "actable_id"], name: "index_products_on_actable_type_and_actable_id"
+  end
+
+  create_table "splits", force: :cascade do |t|
+    t.string "refrigerant"
+    t.string "temperature_condition"
+    t.string "voltage"
+    t.float "power_usage"
+    t.integer "net_weight"
+    t.string "dimensions"
+    t.string "packed_sizes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

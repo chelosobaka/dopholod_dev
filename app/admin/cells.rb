@@ -60,7 +60,7 @@ ActiveAdmin.register Cell do
         "#{cell.net_weight} кг"
       end
       row "Размеры в упаковке", :packed_sizes do
-        "#{cell.net_weight} мм"
+        "#{cell.packed_sizes} мм"
       end
       row :created_at
       row :updated_at

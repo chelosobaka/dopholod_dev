@@ -1,5 +1,7 @@
 ru:
   cell: "Камера"
+  monoblock: "Моноблок"
+  split: "Сплит-система"
   activerecord:
     models:
       user: "Пользователь"
@@ -29,6 +31,10 @@ ru:
       avatar: "Аватар"
     cells: "Камеры"
     cell: "Камера"
+    monoblock: "Моноблок"
+    monoblocks: "Моноблоки"
+    split: "Сплит-система"
+    splits: "Сплит-системы"
     catalog: "Каталог"
     detail: "Подробнее"
     dashboard: "Панель управления"

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root "cells#index"
+  resources :splits, only: [:index, :show]
+  resources :monoblocks, only: [:index, :show]
   resources :cells, only: [:index, :show]
   resources :products, only: [:index, :show]
 

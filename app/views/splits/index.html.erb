@@ -1,0 +1,42 @@
+<div class="product-container">
+  <div class="model-title">
+    <h1>Моноблоки</h1>
+  </div><!-- /title -->
+
+  <% @splits.each do |split| %>
+    <div class="col-md-3">
+      <div class="product-item">
+        <div class="product-image">
+          <%= image_tag(split.avatar.url, size: "200x250") if split.avatar? %>
+        </div><!-- /product-image -->
+
+        <div class="product-title">
+          <h3><%=link_to split.title, cell_path(split.id) %></h3>
+        </div><!-- /cproduct-title -->
+
+        <div class="product-table">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row">Габаритные размеры, мм</th>
+                <td><%= split.dimensions %></td>
+              </tr>
+              <tr>
+                <th scope="row">Температурный режим, °C</th>
+                <td><%= split.temperature_condition %></td>
+              </tr>
+              <tr>
+                <th scope="row">Цена, руб. с НДС</th>
+                <td><%= split.price %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- /product-table -->
+
+        <div class="link-to-detail">
+          <%=link_to "Подробнее", split_path(split.id)%>
+        </div><!-- /link-to-detail -->
+      </div><!-- /product-item -->
+    </div><!-- /col-md-3 -->
+  <% end %>
+</div>

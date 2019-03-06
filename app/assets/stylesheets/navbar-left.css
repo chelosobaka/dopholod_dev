@@ -8,7 +8,6 @@
 
 .brand{
   display: block;
-  margin-bottom: 25px;
   font-size: 40px;
   text-align: center;
   display: block;
@@ -17,9 +16,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-
+  margin-bottom: 25px;
 }
-
 
 .brand>a{
   color: #1a273e;

@@ -10,15 +10,15 @@ ActiveAdmin.register Product do
   index :title => "Вся продукция" do
     selectable_column
     column :id
-    column "img", :sortable => false do |cell|
-      if cell.avatar.present?
-        image_tag("#{cell.avatar}", size: "24x24")
+    column "img", :sortable => false do |product|
+      if product.avatar.present?
+        image_tag("#{product.avatar}", size: "24x24")
       else
         image_tag("MyLogo.png", size: "24x24")
       end
     end
     column "Название", :title
-    column "Цена", :price
+    column "Цена, руб.", :price
     column "Тип продукта", :translated_actable_type
     column "Создан", :created_at
     column "Изменён", :updated_at
