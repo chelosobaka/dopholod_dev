@@ -6,8 +6,9 @@ class CreateSplits < ActiveRecord::Migration[5.2]
       t.string :voltage
       t.float :power_usage
       t.integer :net_weight
-      t.string :dimensions
       t.string :packed_sizes
+      t.string :inner_dimensions
+      t.string :external_dimensions
       t.timestamps
     end
   end

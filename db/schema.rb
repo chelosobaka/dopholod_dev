@@ -77,8 +77,9 @@ ActiveRecord::Schema.define(version: 2019_03_05_233031) do
     t.string "voltage"
     t.float "power_usage"
     t.integer "net_weight"
-    t.string "dimensions"
     t.string "packed_sizes"
+    t.string "inner_dimensions"
+    t.string "external_dimensions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

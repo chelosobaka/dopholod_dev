@@ -4,7 +4,7 @@ config.filters = false
   menu parent: "Catalog", label: proc{ I18n.t("active_admin.splits") }
 
   permit_params :title, :price, :refrigerant, :temperature_condition, :voltage, :power_usage,
-    :net_weight, :dimensions, :packed_sizes, :avatar
+    :net_weight, :inner_dimensions, :external_dimensions, :packed_sizes, :avatar
 
   controller do
     def index
@@ -31,7 +31,8 @@ config.filters = false
     column "Температурный режим", :temperature_condition
     column "Напряжение в сети, в/ф/гц", :voltage
     column "Maксимальное энергопотребление, кВт", :power_usage
-    column "Габаритные размеры, мм", :dimensions
+    column "Габаритные размеры внешнего блока, мм", :external_dimensions
+    column "Габаритные размеры внутреннего блока, мм", :inner_dimensions
     column "Вес нетто, кг", :net_weight
     column "Размеры в упаковке, мм", :packed_sizes
     actions
@@ -61,8 +62,11 @@ config.filters = false
       row "Maксимальное энергопотребление", :power_usage do
         "#{split.power_usage} кВт"
       end
-      row "Габаритные размеры", :dimensions do
-        "#{split.dimensions} мм"
+      row "Габаритные размеры внешнего блока", :external_dimensions do
+        "#{split.external_dimensions} мм"
+      end
+      row "Габаритные размеры внутреннего блока", :inner_dimensions do
+        "#{split.inner_dimensions} мм"
       end
       row "Вес нетто", :net_weight do
         "#{split.net_weight} кг"
@@ -83,7 +87,8 @@ config.filters = false
       f.input :temperature_condition, label: 'Температурный режим'
       f.input :voltage, label: 'Напряжение в сети, в/ф/гц'
       f.input :power_usage, label: 'Maксимальное энергопотребление, кВт'
-      f.input :dimensions, label: 'Габаритные размеры, мм'
+      f.input :external_dimensions, label: 'Габаритные размеры внешнего блока, мм'
+      f.input :inner_dimensions, label: 'Габаритные размеры внутреннего блока, мм'
       f.input :net_weight, label: 'Вес нетто, кг'
       f.input :packed_sizes, label: 'Размеры в упаковке, мм'
       f.input :avatar, label: 'Аватар'

@@ -13,17 +13,20 @@
         <div class="product-title">
           <h3><%=link_to split.title, cell_path(split.id) %></h3>
         </div><!-- /cproduct-title -->
-
         <div class="product-table">
           <table class="table table-striped">
             <tbody>
               <tr>
-                <th scope="row">Габаритные размеры, мм</th>
-                <td><%= split.dimensions %></td>
-              </tr>
-              <tr>
                 <th scope="row">Температурный режим, °C</th>
                 <td><%= split.temperature_condition %></td>
+              </tr>
+              <tr>
+                <th scope="row">Габаритные размеры внешнего блока, мм</th>
+                <td><%= split.external_dimensions %></td>
+              </tr>
+              <tr>
+                <th scope="row">Габаритные размеры внутреннего блока, мм</th>
+                <td><%= split.inner_dimensions %></td>
               </tr>
               <tr>
                 <th scope="row">Цена, руб. с НДС</th>
