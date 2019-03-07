@@ -7,7 +7,7 @@
     <div class="col-md-3">
       <div class="product-item">
         <div class="product-image">
-          <%= image_tag(split.avatar.url, size: "200x250") if split.avatar? %>
+          <%= image_tag(product_avatar(split), size: "200x250") %>
         </div><!-- /product-image -->
 
         <div class="product-title">

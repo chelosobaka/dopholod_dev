@@ -1,0 +1,46 @@
+<div class="product-shhow">
+  <div class="model-title">
+    <h1><%= @monoblock.title %></h1>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <%= image_tag(@monoblock.avatar.url, size: "260x380") if @monoblock.avatar? %>
+    </div><!-- /col-md-2 -->
+    <div class="col-md-10">
+      <div class="product-table-show">
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">Хладагент</th>
+              <td><%= @monoblock.refrigerant %></td>
+            </tr>
+            <tr>
+              <th scope="row">Температурный режим, °С</th>
+              <td><%= @monoblock.temperature_condition %></td>
+            </tr>
+            <tr>
+              <th scope="row">Напряжение в сети, в/ф/гц</th>
+              <td><%= @monoblock.voltage %></td>
+            </tr>
+            <tr>
+              <th scope="row">Maксимальное энергопотребление, кВт</th>
+              <td><%= @monoblock.power_usage %></td>
+            </tr>
+            <tr>
+              <th scope="row">Вес нетто, кг</th>
+              <td><%= @monoblock.net_weight %></td>
+            </tr>
+            <tr>
+              <th scope="row">Размеры в упаковке</th>
+              <td><%= @monoblock.packed_sizes %></td>
+            </tr>
+            <tr class="price">
+              <th scope="row">Цена, руб. с НДС</th>
+              <td><%= @monoblock.price %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /product-table -->
+    </div><!-- /col-md-10 -->
+  </div><!-- /row -->
+</div><!-- /product-shhow -->

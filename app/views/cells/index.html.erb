@@ -7,7 +7,7 @@
     <div class="col-md-3">
       <div class="product-item">
         <div class="product-image">
-          <%= image_tag(cell.avatar.url, size: "200x250") if cell.avatar? %>
+          <%= image_tag(product_avatar(cell), size: "200x250")  %>
         </div><!-- /product-image -->
 
         <div class="product-title">
@@ -22,8 +22,8 @@
                 <td><%= cell.space %></td>
               </tr>
               <tr>
-                <th scope="row">Диапазон температуры окружающего воздуха, °C</th>
-                <td><%= cell.temperature_range %></td>
+                <th scope="row">Габаритные размеры, мм</th>
+                <td><%= cell.dimensions %></td>
               </tr>
               <tr>
                 <th scope="row">Цена, руб. с НДС</th>

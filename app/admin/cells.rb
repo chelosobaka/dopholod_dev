@@ -22,7 +22,7 @@ ActiveAdmin.register Cell do
       if cell.avatar.present?
         image_tag("#{cell.avatar}", size: "24x24")
         else
-          image_tag("MyLogo.png",  size: "24x24")
+          image_tag("MyLogo.png", size: "24x24")
         end
     end
     column "Название", :title

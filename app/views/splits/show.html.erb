@@ -1,0 +1,50 @@
+<div class="product-shhow">
+  <div class="model-title">
+    <h1><%= @split.title %></h1>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <%= image_tag(product_avatar(@split), size: "260x380") %>
+    </div><!-- /col-md-2 -->
+    <div class="col-md-10">
+      <div class="product-table-show">
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">Хладагент</th>
+              <td><%= @split.refrigerant %></td>
+            </tr>
+            <tr>
+              <th scope="row">Температурный режим, °С</th>
+              <td><%= @split.temperature_condition %></td>
+            </tr>
+            <tr>
+              <th scope="row">Напряжение в сети, в/ф/гц</th>
+              <td><%= @split.voltage %></td>
+            </tr>
+            <tr>
+              <th scope="row">Maксимальное энергопотребление, кВт</th>
+              <td><%= @split.power_usage %></td>
+            </tr>
+            <tr>
+              <th scope="row">Вес нетто, кг</th>
+              <td><%= @split.net_weight %></td>
+            </tr>
+            <tr>
+              <th scope="row">Габаритные размеры внешнего блока, мм</th>
+              <td><%= @split.external_dimensions %></td>
+            </tr>
+            <tr>
+              <th scope="row">Габаритные размеры внутреннего блока, мм</th>
+              <td><%= @split.inner_dimensions %></td>
+            </tr>
+            <tr class="price">
+              <th scope="row">Цена, руб. с НДС</th>
+              <td><%= @split.price %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /product-table -->
+    </div><!-- /col-md-10 -->
+  </div><!-- /row -->
+</div><!-- /product-shhow -->

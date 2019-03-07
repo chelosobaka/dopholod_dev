@@ -13,6 +13,7 @@
 .model-title{
   color: #1a273e;
   font-family: 'Russo One', sans-serif;
+  margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -65,5 +66,21 @@
 .link-to-detail:hover{
   display:block;
   cursor: pointer;
+  background-color: #ffce26 !important;
+}
+
+.product-shhow{
+  margin: 40px;
+
+}
+
+.product-table-show{
+  max-width: 800px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price{
   background-color: #ffce26 !important;
 }
