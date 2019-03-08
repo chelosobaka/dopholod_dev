@@ -1,4 +1,10 @@
 class Cell < ApplicationRecord
   acts_as :product
 
+  validates :temperature_range, length: {maximum: 20}
+  validates :space, numericality: {only_float: true}, allow_blank: true
+  validates :dimensions, length: {maximum: 30}
+  validates :net_weight, numericality: true, allow_blank: true
+  validates :packed_sizes, length: {maximum: 30}
+
 end

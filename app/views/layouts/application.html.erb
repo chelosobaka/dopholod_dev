@@ -20,18 +20,22 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-2 nopadding">
+        <nav class="nav navigation">
           <%= render 'layouts/navbar' %>
-        </div><!-- /col-md-2 -->
-        <div class="col-md-10">
-            <%= yield %>
-        </div><!-- /col-md-10 -->
+        </nav>
+
+        <div class="main">
+          <div class="row">
+          <%= yield %>
+          </div>
+        </div><!-- /main -->
+
+        <!-- Footer -->
+        <footer class="page-footer font-small">
+          <%= render 'layouts/footer' %>
+        </footer>
+
       </div><!-- /row -->
-
-      <footer>
-        <p>&copy; Company 2019</p>
-      </footer>
-
     </div> <!-- /container -->
 
   </body>
