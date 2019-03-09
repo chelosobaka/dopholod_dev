@@ -4,7 +4,7 @@ config.filters = false
   menu parent: "Catalog", label: proc{ I18n.t("active_admin.splits") }
 
   permit_params :title, :price, :refrigerant, :temperature_condition, :voltage, :power_usage,
-    :net_weight, :inner_dimensions, :external_dimensions, :packed_sizes, :avatar
+    :net_weight, :inner_dimensions, :external_dimensions, :packed_sizes, :image_link, :avatar
 
   controller do
     def index
@@ -21,9 +21,11 @@ config.filters = false
     column "img", :sortable => false do |split|
       if split.avatar.present?
         image_tag("#{split.avatar}", size: "24x24")
-        else
-          image_tag("MyLogo.png",  size: "24x24")
-        end
+      elsif split.image_link.present?
+        image_tag("#{split.image_link}", size: "24x24")
+      else
+        image_tag("MyLogo.png",  size: "24x24")
+      end
     end
     column "Название", :title
     column "Цена, руб.", :price
@@ -43,6 +45,8 @@ config.filters = false
       row "Аватар", :avatar do
         if split.avatar.present?
           image_tag(split.avatar.url, size: "160x240")
+        elsif split.image_link.present?
+          image_tag(split.image_link, size: "160x240")
         else
           image_tag("MyLogo.png",  size: "325x250")
         end
@@ -91,6 +95,7 @@ config.filters = false
       f.input :inner_dimensions, label: 'Габаритные размеры внутреннего блока, мм'
       f.input :net_weight, label: 'Вес нетто, кг'
       f.input :packed_sizes, label: 'Размеры в упаковке, мм'
+      f.input :image_link, label: 'Ссылка на изображение'
       f.input :avatar, label: 'Аватар'
     end
     f.actions

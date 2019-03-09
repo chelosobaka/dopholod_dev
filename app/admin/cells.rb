@@ -4,7 +4,7 @@ ActiveAdmin.register Cell do
   menu parent: "Catalog", label: proc{ I18n.t("active_admin.cells") }
 
   permit_params :title, :price, :temperature_range, :space,
-  :dimensions, :net_weight, :packed_sizes, :avatar
+  :dimensions, :net_weight, :packed_sizes, :image_link, :avatar
 
   controller do
     def index
@@ -21,9 +21,11 @@ ActiveAdmin.register Cell do
     column "img", :sortable => false do |cell|
       if cell.avatar.present?
         image_tag("#{cell.avatar}", size: "24x24")
-        else
-          image_tag("MyLogo.png", size: "24x24")
-        end
+      elsif cell.image_link.present?
+        image_tag("#{cell.image_link}", size: "24x24")
+      else
+        image_tag("MyLogo.png", size: "24x24")
+      end
     end
     column "Название", :title
     column "Цена, руб.", :price
@@ -40,6 +42,8 @@ ActiveAdmin.register Cell do
       row "Аватар", :avatar do
         if cell.avatar.present?
           image_tag(cell.avatar.url, size: "160x240")
+        elsif cell.image_link.present?
+          image_tag(cell.image_link, size: "160x240")
         else
           image_tag("MyLogo.png",  size: "325x250")
         end
@@ -62,6 +66,9 @@ ActiveAdmin.register Cell do
       row "Размеры в упаковке", :packed_sizes do
         "#{cell.packed_sizes} мм"
       end
+      row "Ссылка на изображение", :image_link do
+        "#{cell.image_link}"
+      end
       row :created_at
       row :updated_at
     end
@@ -76,6 +83,7 @@ ActiveAdmin.register Cell do
       f.input :dimensions, label: 'Габаритные размеры, мм'
       f.input :net_weight, label: 'Вес нетто, кг'
       f.input :packed_sizes, label: 'Размеры в упаковке, мм'
+      f.input :image_link, label: 'Ссылка на изображение'
       f.input :avatar, label: 'Аватар'
     end
     f.actions

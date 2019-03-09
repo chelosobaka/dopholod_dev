@@ -13,6 +13,8 @@ ActiveAdmin.register Product do
     column "img", :sortable => false do |product|
       if product.avatar.present?
         image_tag("#{product.avatar}", size: "24x24")
+      elsif product.image_link.present?
+        image_tag("#{product.image_link}", size: "24x24")
       else
         image_tag("MyLogo.png", size: "24x24")
       end
