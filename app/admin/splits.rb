@@ -51,6 +51,7 @@ config.filters = false
           image_tag("MyLogo.png",  size: "325x250")
         end
       end
+      row "id", :id
       row "Цена", :price do
         "#{split.price} руб."
       end

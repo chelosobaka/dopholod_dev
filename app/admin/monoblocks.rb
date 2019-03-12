@@ -4,7 +4,7 @@ config.filters = false
   menu parent: "Catalog", label: proc{ I18n.t("active_admin.monoblocks") }
 
   permit_params :title, :price, :refrigerant, :temperature_condition, :voltage, :power_usage,
-    :net_weight, :dimensions, :packed_sizes, :image_link, :avatar
+    :net_weight, :dimensions, :packed_sizes, :image_link, :avatar, cell_ids: []
 
   controller do
     def index
@@ -50,6 +50,7 @@ config.filters = false
           image_tag("MyLogo.png",  size: "325x250")
         end
       end
+      row "id", :id
       row "Цена", :price do
         "#{monoblock.price} руб."
       end
@@ -74,6 +75,9 @@ config.filters = false
       row "Размеры в упаковке", :packed_sizes do
         "#{monoblock.packed_sizes} мм"
       end
+      row "cells", :cells do
+        monoblock.cells.map{ |p| link_to p.title, admin_cell_path(p)}.join(', ').html_safe
+      end
       row :created_at
       row :updated_at
     end
@@ -92,6 +96,7 @@ config.filters = false
       f.input :packed_sizes, label: 'Размеры в упаковке, мм'
       f.input :image_link, label: 'Ссылка на изображение'
       f.input :avatar, label: 'Аватар'
+      f.input :cell_ids, as: :check_boxes, collection: Cell.all
     end
     f.actions
   end

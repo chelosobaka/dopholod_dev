@@ -4,7 +4,7 @@ ActiveAdmin.register Cell do
   menu parent: "Catalog", label: proc{ I18n.t("active_admin.cells") }
 
   permit_params :title, :price, :temperature_range, :space,
-  :dimensions, :net_weight, :packed_sizes, :image_link, :avatar
+  :dimensions, :net_weight, :packed_sizes, :image_link, :avatar, monoblock_ids: []
 
   controller do
     def index
@@ -48,6 +48,7 @@ ActiveAdmin.register Cell do
           image_tag("MyLogo.png",  size: "325x250")
         end
       end
+      row "id", :id
       row "Цена", :price do
         "#{cell.price} руб."
       end
@@ -69,6 +70,9 @@ ActiveAdmin.register Cell do
       row "Ссылка на изображение", :image_link do
         "#{cell.image_link}"
       end
+      row "monoblocks", :monoblocks do
+        cell.monoblocks.map{ |p| link_to p.title, admin_monoblock_path(p)}.join(', ').html_safe
+      end
       row :created_at
       row :updated_at
     end
@@ -85,6 +89,7 @@ ActiveAdmin.register Cell do
       f.input :packed_sizes, label: 'Размеры в упаковке, мм'
       f.input :image_link, label: 'Ссылка на изображение'
       f.input :avatar, label: 'Аватар'
+      f.input :monoblock_ids, as: :check_boxes, collection: Monoblock.all
     end
     f.actions
   end

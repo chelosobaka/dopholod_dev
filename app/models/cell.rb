@@ -1,6 +1,8 @@
 class Cell < ApplicationRecord
   acts_as :product
 
+  has_and_belongs_to_many :monoblocks
+
   validates :temperature_range, length: {maximum: 20}
   validates :space, numericality: {only_float: true}, allow_blank: true
   validates :dimensions, length: {maximum: 30}
