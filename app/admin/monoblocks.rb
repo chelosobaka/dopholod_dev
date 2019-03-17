@@ -96,7 +96,7 @@ config.filters = false
       f.input :packed_sizes, label: 'Размеры в упаковке, мм'
       f.input :image_link, label: 'Ссылка на изображение'
       f.input :avatar, label: 'Аватар'
-      f.input :cell_ids, as: :check_boxes, collection: Cell.all
+      f.input :cell_ids, label: 'Камеры', as: :check_boxes, collection: Cell.all
     end
     f.actions
   end

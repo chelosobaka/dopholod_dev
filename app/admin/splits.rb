@@ -4,7 +4,7 @@ config.filters = false
   menu parent: "Catalog", label: proc{ I18n.t("active_admin.splits") }
 
   permit_params :title, :price, :refrigerant, :temperature_condition, :voltage, :power_usage,
-    :net_weight, :inner_dimensions, :external_dimensions, :packed_sizes, :image_link, :avatar
+    :net_weight, :inner_dimensions, :external_dimensions, :packed_sizes, :image_link, :avatar, cell_ids: []
 
   controller do
     def index
@@ -79,6 +79,9 @@ config.filters = false
       row "Размеры в упаковке", :packed_sizes do
         "#{split.packed_sizes} мм"
       end
+      row "Подходящие камеры", :cells do
+        split.cells.map{ |p| link_to p.title, admin_cell_path(p)}.join(', ').html_safe
+      end
       row :created_at
       row :updated_at
     end
@@ -98,6 +101,7 @@ config.filters = false
       f.input :packed_sizes, label: 'Размеры в упаковке, мм'
       f.input :image_link, label: 'Ссылка на изображение'
       f.input :avatar, label: 'Аватар'
+      f.input :cell_ids, label: 'Камеры', as: :check_boxes, collection: Cell.all
     end
     f.actions
   end

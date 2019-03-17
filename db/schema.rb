@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_11_234712) do
+ActiveRecord::Schema.define(version: 2019_03_13_145510) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -51,6 +51,11 @@ ActiveRecord::Schema.define(version: 2019_03_11_234712) do
   create_table "cells_monoblocks", id: false, force: :cascade do |t|
     t.integer "cell_id"
     t.integer "monoblock_id"
+  end
+
+  create_table "cells_splits", id: false, force: :cascade do |t|
+    t.integer "cell_id"
+    t.integer "split_id"
   end
 
   create_table "monoblocks", force: :cascade do |t|

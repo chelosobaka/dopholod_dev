@@ -8,6 +8,7 @@ class MonoblocksController < InheritedResources::Base
   def show
     @monoblock = Monoblock.find(params[:id])
     @product = Product.find_by(actable_type: "Monoblock", actable_id: params[:id])
+    @additional = @monoblock.cells
   end
 end
 

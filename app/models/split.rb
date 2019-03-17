@@ -1,6 +1,8 @@
 class Split < ApplicationRecord
   acts_as :product
 
+  has_and_belongs_to_many :cells
+
   validates :refrigerant, length: {maximum: 20}
   validates :temperature_condition, length: {maximum: 20}
   validates :voltage, length: {maximum: 20}

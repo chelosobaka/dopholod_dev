@@ -6,6 +6,7 @@ class CellsController < InheritedResources::Base
   def show
     @cell = Cell.find(params[:id])
     @product = Product.find_by(actable_type: "Cell", actable_id: params[:id])
+    @additional = @cell.monoblocks + @cell.splits
   end
 end
 
