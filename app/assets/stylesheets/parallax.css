@@ -1,0 +1,66 @@
+.opasity {
+  background-color:rgba(0, 0, 0, 0.7);
+}
+
+.parallax-window {
+  margin-top: 70px;
+  height: 750px;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tagline{
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.tagline h1{
+  font-weight: 900;
+  font-size: 45px;
+  text-align: center;
+  line-height: 1.1em;
+  margin-bottom: 20px;
+  text-transform: none;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+}
+
+.tagline-resume {
+  margin-top: 30px;
+}
+
+.resume {
+  background-color: #ffce26;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  height: 370px;
+}
+
+.resume p{
+  color: #06266F;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.resume-text{
+  height: 180px;
+  align-items: center;
+}
+.logo{
+  height: 180px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-align:center;
+}
+.tales1 {
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,43 @@
+.navbar {
+  background-color: #ffde11;
+  border: none;
+  padding: 0;
+}
+
+.navbar-header {
+  text-align: center;
+}
+
+.custom-brand {
+  font-size: 40px;
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #06266F;
+}
+
+.nav-item {
+  background-color: none;
+}
+
+.nav-link {
+  color: #06266F;
+  font-size: 25px;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.phone {
+  margin: 0 auto;
+  font-size: 40px;
+  font-family: 'Anton', sans-serif;
+  color: #06266F;
+}
+
+.nav-item:hover {
+  background-color: #06266F;
+  border-radius: 5px;
+}
+
+.nav-item a:hover {
+  height: 50px;
+  color: white !important;
+}
+

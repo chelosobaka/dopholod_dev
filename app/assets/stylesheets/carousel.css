@@ -1,0 +1,51 @@
+.carouser-custom {
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.carouser-custom .title {
+  margin-bottom: 60px;
+}
+
+.carouser-custom .title h1 {
+  color:#06266F;
+  font-family: 'Rubik Mono One', sans-serif;
+  text-align: center;
+  font-size: 60px;
+}
+.tales {
+  width: 100%;
+  height: 600px;
+}
+.carousel-inner {
+  width:100%;
+  max-height: 100% !important;
+}
+
+.carousel-item {
+  background-color:rgba(0, 0, 0, 0.7);
+}
+.carousel-caption h1 {
+  color: #06266F;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+.carousel-caption {
+  border-radius: 20px;
+  background-color: #ffde11;
+}
+.carousel-control-next:hover{
+  transition: .6s;
+  background: -moz-linear-gradient(left, rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 100%);
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0) 30%,rgba(0,0,0,0.6) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,0) 30%,rgba(0,0,0,0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=1 );
+ }
+ .carousel-control-prev:hover{
+  transition: .6s;
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%);
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 70%);
+  background: linear-gradient(to right, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 70%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=1 );
+ }

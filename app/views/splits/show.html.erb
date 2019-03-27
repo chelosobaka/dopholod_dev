@@ -1,4 +1,4 @@
-<div class="product-shhow">
+<div class="product-show">
   <div class="model-title">
     <h1><%= @split.title %></h1>
   </div>
@@ -45,92 +45,25 @@
             </tr>
           </tbody>
         </table>
+        <div class="button-wrapper">
+          <a class="btn popup-btn" href="#">Получить консультацию</a>
+        </div>
       </div><!-- /product-table -->
     </div><!-- /col-md-10 -->
+    <div class="popup-wrap">
+      <div class="popup-box">
+        <h2>Title of Popup</h2>
+        <h3>Ты пидор.</h3>
+        <a class="close-btn popup-close" href="#">
+          <span class="glyphicon glyphicon-remove"></span>
+        </a>
+      </div>
+    </div>
   </div><!-- /row -->
-  <!-- additional-products -->
   <div class="additional-products">
     <div class="model-title">
-      <h3>Агрегаты подходят к этой камере:</h3>
+      <h3>Камеры подходят к этому агрегату:</h3>
     </div><!-- model-title -->
-    <% if @additional.count <= 4 %>
-      <div class="row">
-        <div class="col-md-11 no-carousel">
-          <% @additional.each do |item| %>
-            <div class="item">
-              <div class="carousel-col">
-                <div class="block">
-                  <div class="product-image">
-                    <%= image_tag(product_avatar(item), size: "140x200") %>
-                  </div><!-- product-image -->
-                  <div class="product-title product-title-center">
-                    <h3><%=link_to item.title, cell_path(item.id) %></h3>
-                  </div><!-- product-title product-title-center -->
-                </div><!-- block -->
-              </div><!-- carousel-col -->
-            </div><!-- item -->
-          <% end %>
-        </div><!-- col-md-11 no-carouse -->
-      </div><!-- row -->
-    <% else %>
-    <!-- carousel -->
-      <div class="row">
-        <div class="col-md-11 col-centered">
-          <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="4000">
-            <div class="carousel-inner col-centered">
-              <% @additional.each_with_index do |item, index| %>
-                <% if index == 0 %>
-                  <div class="item active">
-                <% else %>
-                  <div class="item">
-                <%end%>
-                <div class="carousel-col">
-                  <div class="block">
-                    <div class="product-image">
-                      <%= image_tag(product_avatar(item), size: "140x200") %>
-                    </div>
-                    <div class="product-title product-title-center">
-                      <h3><%= link_to item.title, cell_path(item.id) %></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% end %>
-            </div>
-            <!-- Controls -->
-            <div class="left carousel-control">
-              <a href="#carousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-            </div><!-- left carousel-control -->
-            <div class="right carousel-control">
-              <a href="#carousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div><!-- right carousel-control -->
-          </div><!-- carousel slide -->
-        </div><!-- col-md-11 col-centered -->
-      </div><!-- row -->
-
-      <script type="text/javascript">
-        $('.carousel[data-type="multi"] .item').each(function() {
-          var next = $(this).next();
-          if (!next.length) {
-            next = $(this).siblings(':first');
-          }
-          next.children(':first-child').clone().appendTo($(this));
-          for (var i = 0; i < 2; i++) {
-            next = next.next();
-            if (!next.length) {
-              next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-          }
-        });
-      </script>
-
-    <%end%>
-  </div><!-- additional-products -->
+    <%= render partial: 'partial/additional', object: @additional %>
+  </div>
 </div><!-- /product-shhow -->
