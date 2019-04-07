@@ -1,0 +1,160 @@
+.first-block{
+  background: url("/assets/main2.jpg");
+  background-size: cover;
+}
+
+hr{
+  border: #ffce26 solid 3px;
+  width: 60%;
+}
+
+.first-title{
+  padding-top: 100px;
+  padding-bottom: 60px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.first-title h1{
+  font-size: 45px;
+  color: #1a273e;
+  font-family: 'Russo One', sans-serif;
+  text-align: center;
+}
+
+.services{
+ padding-top: 60px;
+ padding-bottom: 80px;
+}
+
+.main-benefits-lists {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.resume{
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  background: #f5f5f5;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  height: 390px;
+}
+
+.resume p{
+  color: #494c5b;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.resume-text{
+  height: 180px;
+  align-items: center;
+}
+
+.logo{
+  height: 180px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-align:center;
+}
+
+.tales1{
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.second-block{
+  display: block;
+overflow: auto;
+  position: relative;
+}
+
+.second-title{
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.second-title h2{
+  color: #1a273e;
+  font-family: 'Russo One', sans-serif;
+  text-align: left;
+}
+
+
+.text-col-left{
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-bottom: 60px;
+
+}
+
+.text-col-right{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-left: 6px solid rgba(0,0,0,0.2); 
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.left-list{
+  list-style: disc;
+}
+
+
+.left-list li{
+  color: #1a273e;
+  padding-bottom: 20px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 18px;
+}
+
+.right-list{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+ul.right-list > li:before {
+  display: inline-block;
+  content: "-";
+  width: 1em;
+  margin-left: -1em;
+}
+
+.right-list li{
+  color: #1a273e;
+  padding-bottom: 10px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 18px;
+}
+
+.bold-text{
+  font-size: 19px;
+  color: red;
+}
+
+.right-cursive{
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  color: #1a273e;
+  font-size: 16px;
+}

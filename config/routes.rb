@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  root "cells#index"
+  root "static_pages#main"
+  get "main", to: "static_pages#main"
+
   resources :splits, only: [:index, :show]
   resources :monoblocks, only: [:index, :show]
   resources :cells, only: [:index, :show]
-  resources :products, only: [:index, :show]
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
