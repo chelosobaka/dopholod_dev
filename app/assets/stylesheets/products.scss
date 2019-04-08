@@ -299,10 +299,11 @@
 }
 
 .popup-box {
+    font-family: 'Russo One', sans-serif;
   position: absolute;
   left:50%;
   top:40%;
-  width: 500px;
+  width: 600px;
   padding: 70px;
   transform: translate(-50%, -50%) scale(0.5);
   box-shadow: 0px 2px 16px rgba(0,0,0,0.5);
