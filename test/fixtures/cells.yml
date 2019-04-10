@@ -1,17 +1,1 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  temperature_range: MyString
-  space: 1.5
-  dimensions: MyString
-  net_weight: 1
-  packed_sizes: MyString
-  product_id: one
-
-two:
-  temperature_range: MyString
-  space: 1.5
-  dimensions: MyString
-  net_weight: 1
-  packed_sizes: MyString
-  product_id: two

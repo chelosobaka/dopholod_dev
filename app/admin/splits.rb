@@ -30,11 +30,11 @@ config.filters = false
     column "Название", :title
     column "Цена, руб.", :price
     column "Хладагент", :refrigerant
-    column "Температурный режим", :temperature_condition
+    column "Темп. режим", :temperature_condition
     column "Напряжение в сети, в/ф/гц", :voltage
-    column "Maксимальное энергопотребление, кВт", :power_usage
-    column "Габаритные размеры внешнего блока, мм", :external_dimensions
-    column "Габаритные размеры внутреннего блока, мм", :inner_dimensions
+    column "Энергопотребление, кВт", :power_usage
+    column "Размеры внешнего блока, мм", :external_dimensions
+    column "Размеры внутреннего блока, мм", :inner_dimensions
     column "Вес нетто, кг", :net_weight
     column "Размеры в упаковке, мм", :packed_sizes
     actions
