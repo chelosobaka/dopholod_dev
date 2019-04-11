@@ -1,8 +1,12 @@
 .product-container{
   position: relative;
-  padding: 40px 20px 80px 20px;
+  padding: 40px 20px 40px 20px;
 }
-
+@media (max-width: 991px) {
+  .product-container{
+    padding: 20px 20px 40px 20px;
+  }
+}
 .columns-container{
   display: flex;
   width: 100%;
@@ -16,9 +20,7 @@
 }
 
 @media (max-width: 991px) {
-  main{
-    padding-left: 20px;
-  }
+
 }
 
 @media (min-width: 992px) {
@@ -48,14 +50,19 @@
   text-decoration: none;
 }
 
+@media (max-width: 991px) {
+  .model-title h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
 .modal-text{
   border-style: solid;
   border-color: #ffce26;
   border-width:5px 5px 5px 0;
   margin-bottom: 40px;
-  padding: 20px 40px 20px 40px;
   background-color: #f5f5f5;
-  font-size: 17px;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 
@@ -63,13 +70,17 @@
   .modal-text{
     width: auto;
     margin-left: -20px;
-    margin-right: -40px;
+    margin-right: -20px;
     border-width:5px 0 5px 0;
+    font-size: 13px;
+    padding: 10px 20px 10px 20px;
   }
 }
 
 @media (min-width: 992px) {
   .modal-text{
+    padding: 20px 40px 20px 40px;
+    font-size: 17px;
     margin-left: -20px;
     border-width:5px 5px 5px 0;
   }
