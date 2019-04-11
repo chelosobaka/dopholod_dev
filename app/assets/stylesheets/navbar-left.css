@@ -1,104 +1,169 @@
-.navigation{
-  padding-top: 40px;
-  padding-bottom: 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 98;
-  height: 100%;
-  width: 300px;
-  background: #f5f5f5;
-  text-align: center;
+
+/*sm*/
+@media (max-width: 991px) {
+
+  .navigation .model-title{
+    margin:0;
+
+  }
+  .navigation{  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 98;
+    width: 100%;
+    background: #f5f5f5;
+    text-align: center;
+  }
+
+  .brand{
+    font-size: 40px;
+    color: #1a273e;
+    font-family: 'Russo One', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .brand a{
+    color: #1a273e;
+    text-decoration: none;
+  }
+  .menu-left{
+     display: flex;
+  }
+  .nav ul {
+    list-style-type: none;
+    overflow: hidden;
+  }
+  .nav {
+    margin: 0 auto;
+  }
+  .nav li {
+    float: left;
+  }
+
+  .nav li a {
+    text-transform: uppercase;
+    color: #1a273e;
+    text-decoration: none;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+/* Change the link color to #111 (black) on hover */
+  .nav li a:hover {
+    background-color: #ffce26;
+  }
+  .social{
+    display:none;
+  }
 }
 
-.brand{
-  font-size: 40px;
-  color: #1a273e;
-  font-family: 'Russo One', sans-serif;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 25px;
-}
+@media (min-width: 992px) {
+  .navigation{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    height: 100%;
+    width: 300px;
+    background: #f5f5f5;
+    text-align: center;
+  }
 
-.brand>a{
-  color: #1a273e;
-  text-decoration: none;
-}
+  .brand{
+    font-size: 40px;
+    color: #1a273e;
+    font-family: 'Russo One', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
 
-.nav-link{
-  text-align: center;
-}
+  .brand>a{
+    color: #1a273e;
+    text-decoration: none;
+  }
 
-.nav>li>a{
-  text-transform: uppercase;
-  color: #1a273e;
-  text-decoration: none;
-  font-weight: 400px;
-  font-size: 25px;
-  font-family: 'Fira Sans Extra Condensed', sans-serif;
-}
+  .nav-link{
+    text-align: center;
+  }
 
-.nav>li>a:hover{
-  background-color: #ffce26 !important;
-}
+  .nav>li>a{
+    text-transform: uppercase;
+    color: #1a273e;
+    text-decoration: none;
+    font-weight: 400px;
+    font-size: 25px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+  }
 
-.social{
-  position: absolute;
-  bottom: 45px;
-  left: 0;
-  width: 100%;
-}
+  .nav>li>a:hover{
+    background-color: #ffce26 !important;
+  }
 
-.social ul{
-  list-style-type: none;
-  margin: 0 0 0 -5px;
-  padding: 0;
-  text-align: center;
-  font-size: 0;
-}
+  .social{
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+  }
 
-.social li {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 0 5px;
-  padding: 0;
-  line-height: normal;
-  background: 0;
-}
+  .social ul{
+    list-style-type: none;
+    margin: 0 0 0 -5px;
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+  }
 
-.social li.item1 a {
-  content:url("/assets/png/vk_gray.png");
-  height: 30px;
-  width: 30px;
-}
+  .social li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 5px;
+    padding: 0;
+    line-height: normal;
+    background: 0;
+  }
 
-.social li.item1 a:hover {
-  content:url("/assets/png/vk_color.png");
-  height: 30px;
-  width: 30px;
-}
+  .social li.item1 a {
+    content:url("/assets/png/vk_gray.png");
+    height: 30px;
+    width: 30px;
+  }
 
-.social li.item2 a {
-  content:url("/assets/png/insta_gray.png");
-  height: 30px;
-  width: 30px;
-}
+  .social li.item1 a:hover {
+    content:url("/assets/png/vk_color.png");
+    height: 30px;
+    width: 30px;
+  }
 
-.social li.item2 a:hover {
-  content:url("/assets/png/insta_color.png");
-  height: 30px;
-  width: 30px;
-}
+  .social li.item2 a {
+    content:url("/assets/png/insta_gray.png");
+    height: 30px;
+    width: 30px;
+  }
 
-.social li.item3 a {
-  content:url("/assets/png/facebook_gray.png");
-  height: 30px;
-  width: 30px;
-}
+  .social li.item2 a:hover {
+    content:url("/assets/png/insta_color.png");
+    height: 30px;
+    width: 30px;
+  }
 
-.social li.item3 a:hover {
-  content:url("/assets/png/facebook_color.png");
-  height: 30px;
-  width: 30px;
+  .social li.item3 a {
+    content:url("/assets/png/facebook_gray.png");
+    height: 30px;
+    width: 30px;
+  }
+
+  .social li.item3 a:hover {
+    content:url("/assets/png/facebook_color.png");
+    height: 30px;
+    width: 30px;
+  }
 }

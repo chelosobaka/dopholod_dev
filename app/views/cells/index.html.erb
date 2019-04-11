@@ -4,45 +4,47 @@
   </div><!-- /title -->
   <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 modal-text">
-      <p>Холодильные камеры собираются из сэндвич-панелей и имеют сборно-разборную конструкцию. Предназначены для охлаждения и хранения в течение определенного периода продуктов, лекарственных средств, химических реагентов, цветов, изделий из натурального меха и других товаров и продукции. Холодильные установки устанавливаются в доме, небольших и крупных магазинах, складах и на предприятиях разной отрасли. Могут эксплуатировать внутри отапливаемых и неотапливаемых помещений, а также на открытом воздухе или под навесом при температуре окружающей среды от -300С до +400С и показатели относительной влажности максимум 80%. 
+      <p>Холодильные камеры собираются из сэндвич-панелей и имеют сборно-разборную конструкцию. Предназначены для охлаждения и хранения в течение определенного периода продуктов, лекарственных средств, химических реагентов, цветов, изделий из натурального меха и других товаров и продукции. Холодильные установки устанавливаются в доме, небольших и крупных магазинах, складах и на предприятиях разной отрасли. Могут эксплуатировать внутри отапливаемых и неотапливаемых помещений, а также на открытом воздухе или под навесом при температуре окружающей среды от -30С до +40С и показатели относительной влажности максимум 80%. 
       </p>
     </div>
   </div>
   <div class="row">
     <% @cells.each do |cell| %>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-lg-3-custom ">
-        <div class="product-item cell">
-          <div class="product-image">
-            <%= image_tag(product_avatar(cell), size: "200x250")  %>
-          </div><!-- /product-image -->
+      <div class="col -12 col-sm-12 col-md-6 col-lg-4 col-xl-3-custom">
+        <div class="columns-container">
+          <div class="product-item columns">
+            <div class="product-image">
+              <%= image_tag(product_avatar(cell), size: "200x250")  %>
+            </div><!-- /product-image -->
 
-          <div class="product-title">
-            <h3><%=link_to cell.title, cell_path(cell.id) %></h3>
-          </div><!-- /cproduct-title -->
+            <div class="product-title">
+              <h3><%=link_to cell.title, cell_path(cell.id) %></h3>
+            </div><!-- /cproduct-title -->
 
-          <div class="product-table">
-            <table class="table table-striped">
-              <tbody>
-                <tr>
-                  <th scope="row">Объем, м3</th>
-                  <td><%= cell.space %></td>
-                </tr>
-                <tr>
-                  <th scope="row">Габаритные размеры, мм</th>
-                  <td><%= cell.dimensions %></td>
-                </tr>
-                <tr>
-                  <th scope="row">Цена, руб. с НДС</th>
-                  <td><%= cell.price %></td>
-                </tr>
-              </tbody>
-            </table>
-          </div><!-- /product-table -->
+            <div class="product-table">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <th scope="row">Объем, м3</th>
+                    <td><%= cell.space %></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Габаритные размеры, мм</th>
+                    <td><%= cell.dimensions %></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Цена, руб. с НДС</th>
+                    <td><%= cell.price %></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- /product-table -->
 
-          <div class="link-to-detail">
-            <%=link_to "Подробнее", cell_path(cell.id)%>
-          </div><!-- /link-to-detail -->
-        </div><!-- /product-item -->
+            <div class="link-to-detail">
+              <%=link_to "Подробнее", cell_path(cell.id)%>
+            </div><!-- /link-to-detail -->
+          </div><!-- /product-item -->
+        </div><!-- columns-container-->
       </div><!-- /col-md-3 -->
     <% end %>
   </div>

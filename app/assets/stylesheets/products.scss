@@ -3,12 +3,29 @@
   padding: 40px 20px 80px 20px;
 }
 
-.main{
-  padding-left: 300px;
-  margin-bottom: 280px;
-  display:block !important;
+.columns-container{
+  display: flex;
+  width: 100%;
 }
 
+.columns{
+  flex: 1;
+}
+.main{
+  display: block !important;
+}
+
+@media (max-width: 991px) {
+  main{
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main{
+    padding-left: 300px;
+  }
+}
 .product-item{
   position:relative;
   border: 4px solid #f5f5f5;
@@ -36,12 +53,29 @@
   border-color: #ffce26;
   border-width:5px 5px 5px 0;
   margin-bottom: 40px;
-  margin-left: -20px;
   padding: 20px 40px 20px 40px;
   background-color: #f5f5f5;
   font-size: 17px;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
+
+@media (max-width: 991px) {
+  .modal-text{
+    width: auto;
+    margin-left: -20px;
+    margin-right: -40px;
+    border-width:5px 0 5px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-text{
+    margin-left: -20px;
+    border-width:5px 5px 5px 0;
+  }
+}
+
+
 .main-info{
   margin-bottom: 60px;
 }
@@ -69,20 +103,19 @@
 
 .product-table{
   color: #1a273e;
-
+  margin-bottom: 40px;
 }
 
 .link-to-detail{
   position:absolute;
   width: 100%;
-  bottom:0;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   background-color: #f5f5f5;
-  margin-left: -20px;
-  margin-right: -20px;
   bottom: 0;
+  left:0;
+  right: 0;
 }
 
 .link-to-detail>a{
@@ -124,17 +157,6 @@
   background-color: #ffce26 !important;
 }
 
-.cell{
-  min-height: 560px;
-}
-
-.monoblock{
-  min-height: 560px;
-}
-
-.split{
-  min-height:715px;
-}
 
 .dop{
   margin-left: 80px;
@@ -251,15 +273,6 @@
   border: 4px solid #f5f5f5;
 }
 
-
-
-
-
-
-
-
-
-
 .button-wrapper{
   text-align: right;
 }
@@ -353,9 +366,28 @@
 
 
 @media (min-width: 1500px) {
-  .col-lg-3-custom {
+  .col-xl-3-custom {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
   }
+}
+
+@media (max-width: 767px) {
+
+}
+
+/*sm*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/*md*/
+@media (min-width: 992px) and (max-width: 1499px) {
+
+}
+
+/*lg*/
+@media (min-width: 1500px) {
+
 }
