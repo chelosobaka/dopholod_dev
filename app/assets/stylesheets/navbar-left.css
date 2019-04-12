@@ -28,13 +28,14 @@
     text-decoration: none;
   }
   .menu-left{
-     display: flex;
+    display: flex;
   }
   .nav ul {
     list-style-type: none;
     overflow: hidden;
   }
   .nav {
+
     margin: 0 auto;
   }
   .nav li {
