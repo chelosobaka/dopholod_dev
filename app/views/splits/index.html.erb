@@ -8,46 +8,44 @@
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row row-flex row-flex-wrap">
     <% @splits.each do |split| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3-custom">
-        <div class="columns-container">
-          <div class="product-item columns">
-            <div class="product-image">
-              <%= image_tag(product_avatar(split), size: "200x250") %>
-            </div><!-- /product-image -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3-custom">
+        <div class="product-item">
+          <div class="product-image">
+            <%= image_tag(product_avatar(split), size: "200x250") %>
+          </div><!-- /product-image -->
 
-            <div class="product-title">
-              <h3><%=link_to split.title, split_path(split.id) %></h3>
-            </div><!-- /cproduct-title -->
-            <div class="product-table">
-              <table class="table table-striped">
-                <tbody>
-                  <tr>
-                    <th scope="row">Темп. режим, °C</th>
-                    <td><%= split.temperature_condition %></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Габаритные размеры внешнего блока, мм</th>
-                    <td><%= split.external_dimensions %></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Габаритные размеры внутреннего блока, мм</th>
-                    <td><%= split.inner_dimensions %></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Цена, руб. с НДС</th>
-                    <td><%= split.price %></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div><!-- /product-table -->
+          <div class="product-title">
+            <h3><%=link_to split.title, split_path(split.id) %></h3>
+          </div><!-- /cproduct-title -->
+          <div class="product-table">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th scope="row">Темп. режим, °C</th>
+                  <td><%= split.temperature_condition %></td>
+                </tr>
+                <tr>
+                  <th scope="row">Габаритные размеры внешнего блока, мм</th>
+                  <td><%= split.external_dimensions %></td>
+                </tr>
+                <tr>
+                  <th scope="row">Габаритные размеры внутреннего блока, мм</th>
+                  <td><%= split.inner_dimensions %></td>
+                </tr>
+                <tr>
+                  <th scope="row">Цена, руб. с НДС</th>
+                  <td><%= split.price %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- /product-table -->
 
-            <div class="link-to-detail">
-              <%=link_to "Подробнее", split_path(split.id)%>
-            </div><!-- /link-to-detail -->
-          </div><!-- /product-item -->
-        </div><!-- columns-container-->
+          <div class="link-to-detail">
+            <%=link_to "Подробнее", split_path(split.id)%>
+          </div><!-- /link-to-detail -->
+        </div><!-- /product-item -->
       </div><!-- /col-md-3 -->
     <% end %>
   </div>
