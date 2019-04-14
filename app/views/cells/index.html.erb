@@ -8,7 +8,7 @@
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row row-flex row-flex-wrap">
     <% @cells.each do |cell| %>
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3-custom">
         <div class="product-item">
@@ -45,5 +45,12 @@
         </div><!-- /product-item -->
       </div><!-- /col-md-3 -->
     <% end %>
+  </div>
+  <div class="pagination-conteiner">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <%= will_paginate @cells, :previous_label => 'Назад', :next_label => 'Далее' %>
+      </div>
+    </div>
   </div>
 </div>

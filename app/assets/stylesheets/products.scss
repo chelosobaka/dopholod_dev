@@ -412,3 +412,38 @@
 @media (min-width: 1500px) {
 
 }
+
+.pagination-conteiner{
+  color: #1a273e;
+}
+.pagination {
+  font-size: 15px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.pagination > * {
+    margin-right: 0.1em;
+    padding: 0.3em 0.4em;
+}
+.pagination a{
+  color: #1a273e;
+}
+.pagination a:hover {
+    background: #ffce26 none repeat scroll 0 0;
+    color: #1a273e;
+    text-decoration:none;
+}
+
+.pagination a:active {
+  background: #ffce26 none repeat scroll 0 0;
+  text-shadow: none;
+}
+
+.pagination .current {
+    background: #ffce26 none repeat scroll 0 0;
+    color: #1a273e;;
+}
+
+.pagination .disabled {
+    color: #C0C0C0;
+}
