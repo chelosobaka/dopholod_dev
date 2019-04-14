@@ -133,36 +133,48 @@
   }
 
   .social li.item1 a {
-    content:url("/assets/png/vk_gray.png");
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    content:url("/assets/png/vk_color.png");
     height: 30px;
     width: 30px;
   }
 
   .social li.item1 a:hover {
+    -webkit-filter: none;
+    filter: none;
     content:url("/assets/png/vk_color.png");
     height: 30px;
     width: 30px;
   }
 
   .social li.item2 a {
-    content:url("/assets/png/insta_gray.png");
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    content:url("/assets/png/insta_color.png");
     height: 30px;
     width: 30px;
   }
 
   .social li.item2 a:hover {
+    -webkit-filter: none;
+    filter: none;
     content:url("/assets/png/insta_color.png");
     height: 30px;
     width: 30px;
   }
 
   .social li.item3 a {
-    content:url("/assets/png/facebook_gray.png");
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    content:url("/assets/png/facebook_color.png");
     height: 30px;
     width: 30px;
   }
 
   .social li.item3 a:hover {
+    -webkit-filter: none;
+    filter: none;
     content:url("/assets/png/facebook_color.png");
     height: 30px;
     width: 30px;
