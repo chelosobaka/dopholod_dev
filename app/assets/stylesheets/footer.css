@@ -1,53 +1,53 @@
 .page-footer{
-	padding-top: 20px;
-	padding-right: 20px;
-	background: #f5f5f5;
-	z-index:6;
-	/*background-color: #ffce26*/
+  padding-top: 20px;
+  padding-right: 20px;
+  background: #f5f5f5;
+  z-index:6;
+  /*background-color: #ffce26*/
 }
 
 @media (max-width: 991px) {
-	.page-footer{
-		padding-left: 20px;
-	}
+  .page-footer{
+    padding-left: 20px;
+  }
 }
 
 @media (min-width: 992px) {
-	.page-footer{
-		padding-left: 320px;
-	}
+  .page-footer{
+    padding-left: 320px;
+  }
 }
 
 .footer-down{
-	font-family: 'Fira Sans Extra Condensed', sans-serif;
-	padding-top: 40px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  padding-top: 40px;
 }
 .text-uppercase{
-	font-family: 'Russo One', sans-serif;
+  font-family: 'Russo One', sans-serif;
 }
 .footer-text{
-	font-size: 17px;
-	font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 17px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 @media (max-width: 991px) {
-	.footer-text{
-		font-size: 14px;
-	}
+  .footer-text{
+    font-size: 14px;
+  }
 }
 .footer-list{
-	list-style-type: none;
-	padding: 0px;
+  list-style-type: none;
+  padding: 0px;
 }
 .footer-list>li>a{
-	font-size: 17px;
-	font-family: 'Fira Sans Extra Condensed', sans-serif;
-	color: #1a273e;
+  font-size: 17px;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  color: #1a273e;
 }
 
 @media (max-width: 991px) {
-	.footer-list>li>a{
-		font-size: 14px;
-	}
+  .footer-list>li>a{
+    font-size: 14px;
+  }
 }
 
 footer {
@@ -55,8 +55,8 @@ footer {
 }
 
 @media (max-width: 767px){
-	.custom-col-6{
-		width:50%;
-		float:left;
-	}
+  .custom-col-6{
+    width:50%;
+    float:left;
+  }
 }
