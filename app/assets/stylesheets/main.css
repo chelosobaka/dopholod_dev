@@ -48,10 +48,18 @@ hr{
   padding: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
   height: 390px;
+  width: 100%;
 }
-
+@media (max-width: 1700px) {
+  .col-xl-2-custom {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 .resume p{
   color: #494c5b;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
