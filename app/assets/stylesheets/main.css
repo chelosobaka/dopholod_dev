@@ -24,8 +24,8 @@ hr{
 }
 
 .services{
- padding-top: 60px;
- padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 80px;
 }
 
 .main-benefits-lists {
@@ -46,20 +46,15 @@ hr{
   box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
   background: #f5f5f5;
   padding: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
   border-radius: 5px;
   height: 390px;
-  width: 100%;
+  width: 200px;
 }
-@media (max-width: 1700px) {
-  .col-xl-2-custom {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
+
+
 .resume p{
   color: #494c5b;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
@@ -91,7 +86,7 @@ hr{
 
 .second-block{
   display: block;
-overflow: auto;
+  overflow: auto;
   position: relative;
 }
 
@@ -106,7 +101,6 @@ overflow: auto;
   text-align: left;
 }
 
-
 .text-col-left{
   padding-right: 60px;
   padding-left: 60px;
@@ -115,18 +109,14 @@ overflow: auto;
 }
 
 .text-col-right{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
   padding-right: 60px;
   padding-left: 60px;
+  margin-bottom: 60px;
 }
 
 .left-list{
   list-style: disc;
 }
-
 
 .left-list li{
   color: #1a273e;
@@ -164,4 +154,110 @@ ul.right-list > li:before {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   color: #1a273e;
   font-size: 16px;
+}
+
+
+
+@media (max-width: 991px) {
+  .first-title{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .first-title h1{
+    font-size: 28px;
+    color: #1a273e;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+  }
+
+  .second-title{
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .second-title h2{
+    font-size: 20px;
+    color: #1a273e;
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+  }
+
+  .services{
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .text-col-left{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .text-col-right{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .left-list li{
+    font-size: 15px;
+    color: #1a273e;
+    padding-bottom: 20px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+  }
+
+  .bold-text{
+    font-size: 16px;
+    color: red;
+  }
+
+  .right-list li{
+    color: #1a273e;
+    padding-bottom: 10px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 15px;
+  }
+
+  .right-cursive{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    color: #1a273e;
+    font-size: 14px;
+  }
+
+  .second-block{
+    display: block;
+    overflow: auto;
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1700px){
+   .col-xl-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+   .col-xl-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+   .col-xl-4 {
+    -ms-flex: 0 0 33.33333333%;
+    flex: 0 0 33.33333333%;
+    max-width: 33.33333333%;
+  }
+  .col-xl-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }

@@ -1,35 +1,46 @@
-<div class="model-title">
-  <h1><%= link_to "DopHolod", root_path%></h1>
-</div>
-<div class="menu-left">
-  <ul class="nav">
-    <li class="nav-item">
-      <%= link_to "Холодильные камеры", cells_path, class: "nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "Моноблоки", monoblocks_path, class: "nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "Сплит-системы", splits_path, class: "nav-link" %>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">О нас</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Контакты</a>
-    </li>
-  </ul>
-</div><!-- /menu-left -->
-<div class="social">
-  <ul>
-    <li class="item1">
-      <%= link_to "", "https://www.vk.com" %>
-    </li>
-    <li class="item2">
-      <%= link_to "", "https://www.instagram.com" %>
-    </li>
-    <li class="item3">
-      <%= link_to "", "https://www.facebook.com" %>
-    </li>
-  </ul>
-</div>
+<nav class="nav navigation">
+  <div class="nav-title">
+    <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  -->
+    <a class="navbar-toggler icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="fa fa-bars"></span>
+    </a>
+    <div class="model-title">
+      <h1><%= link_to "DopHolod", root_path%></h1>
+    </div>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav">
+      <li class="nav-item">
+        <%= link_to "Холодильные камеры", cells_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Моноблоки", monoblocks_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Сплит-системы", splits_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">О нас</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Контакты</a>
+      </li>
+    </ul>
+  </div><!-- /menu-left -->
+  <div class="social">
+    <ul>
+      <li class="item1">
+        <%= link_to "", "https://www.vk.com" %>
+      </li>
+      <li class="item2">
+        <%= link_to "", "https://www.instagram.com" %>
+      </li>
+      <li class="item3">
+        <%= link_to "", "https://www.facebook.com" %>
+      </li>
+    </ul>
+  </div>
+</nav>
