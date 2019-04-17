@@ -156,6 +156,37 @@ ul.right-list > li:before {
   font-size: 16px;
 }
 
+@media (max-width: 459px){
+  .main-benefits-lists {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .resume{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    background: #f5f5f5;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 390px;
+    width: 100%;
+  }
+
+.main-benefits-lists .col-1{
+   flex: 0 0 100%;
+}
+}
 
 
 @media (max-width: 991px) {
