@@ -1,7 +1,7 @@
 class SplitsController < InheritedResources::Base
 
  def index
-    @splits = Split.paginate(page: params[:page], per_page: 12)
+    @splits = Split.page(params[:page]).per(12)
     @product = Product.where(actable_type: "Split")
   end
 

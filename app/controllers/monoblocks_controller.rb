@@ -1,7 +1,7 @@
 class MonoblocksController < InheritedResources::Base
 
   def index
-    @monoblocks = Monoblock.paginate(page: params[:page], per_page: 12)
+    @monoblocks = Monoblock.page(params[:page]).per(12)
     @product = Product.where(actable_type: "Monoblock")
   end
 

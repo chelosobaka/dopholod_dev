@@ -1,4 +1,9 @@
 ru:
+  views:
+    pagination:
+      previous: "&lsaquo; Назад"
+      next: "Далее &rsaquo;"
+      truncate: "&hellip;"
   cell: "Камера"
   monoblock: "Моноблок"
   split: "Сплит-система"

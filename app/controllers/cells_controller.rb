@@ -1,6 +1,6 @@
 class CellsController < InheritedResources::Base
   def index
-    @cells = Cell.paginate(page: params[:page], per_page: 12)
+    @cells = Cell.page(params[:page]).per(12)
     @product = Product.where(actable_type: "Cell")
   end
   def show

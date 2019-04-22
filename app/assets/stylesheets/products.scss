@@ -413,39 +413,43 @@
 
 }
 
-.pagination-conteiner{
-  color: #1a273e;
-}
 .pagination {
   font-size: 15px;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 
-.pagination > * {
-  margin-right: 0.1em;
-  padding: 0.3em 0.4em;
-}
-
-.pagination a{
+.pagination a, .pagination span.current, .pagination span.gap {
   color: #1a273e;
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
 }
 
-.pagination a:hover {
-  background: #ffce26 none repeat scroll 0 0;
-  color: #1a273e;
-  text-decoration:none;
+.pagination {
+  border: none;
+  .prev{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .page{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .next{
+      padding : 0;
+      float: none;
+      border: none;
+  }
 }
-
-.pagination a:active {
-  background: #ffce26 none repeat scroll 0 0;
-  text-shadow: none;
+.pagination a:hover{
+  background: #ffce26;
 }
-
-.pagination .current {
-  background: #ffce26 none repeat scroll 0 0;
-  color: #1a273e;;
+.pagination a:active{
+  background: #ffce26;
 }
-
-.pagination .disabled {
-  color: #C0C0C0;
+.current{
+  background-color: #ffce26;
 }
