@@ -6,13 +6,13 @@
   /*background-color: #ffce26*/
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1083px) {
   .page-footer{
     padding-left: 20px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1084px) {
   .page-footer{
     padding-left: 320px;
   }
@@ -60,3 +60,4 @@ footer {
     float:left;
   }
 }
+
