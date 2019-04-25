@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "static_pages#main"
   get "main", to: "static_pages#main"
+  get "contact", to: "static_pages#contact"
+  get "about", to: "static_pages#about"
 
   resources :splits, only: [:index, :show]
   resources :monoblocks, only: [:index, :show]

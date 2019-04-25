@@ -1,0 +1,60 @@
+.page-contacts-list {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.page-contacts-list{
+ margin-left: 20px;
+}
+/*#ffce26*/
+.page-contacts-icon{
+  margin: auto 0;
+	text-align: center;
+	background-color: #ffce26;
+	display:inline-block;
+	font-size: 40px;
+}
+
+.page-contacts-icon span{
+	color: #1a273e;
+	width: 54px !important;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.page-contacts-title{
+  color: #1a273e;
+  font-family: 'Russo One', sans-serif;
+}
+
+.page-contacts-text{
+	font-size: 17px;
+	color: #1a273e;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+@media (max-width: 991px){
+	.page-contacts-text{
+		font-size: 13px;
+		color: #1a273e;
+		font-family: 'Fira Sans Extra Condensed', sans-serif;
+	}
+}
+.page-contacts-row{
+	display:flex;
+	margin-bottom: 20px;
+}
+
+.page-contacts-info{
+	margin-left: 20px;
+	display: inline-block;
+}
+.first-block-contact{
+  background: url("/assets/main2.jpg");
+  background-size: cover;
+}
+@media(max-width: 991px){
+  .first-block-contact{
+    background: none;
+
+  }
+}

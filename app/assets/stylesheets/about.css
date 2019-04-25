@@ -1,0 +1,27 @@
+.about-text{
+  font-size: 17px;
+  color: #1a273e;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  margin-left: 20px;
+}
+@media (max-width: 991px){
+  .about-text{
+    font-size: 13px;
+    color: #1a273e;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    margin-left: 20px;
+  }
+}
+.about-text p{
+  margin-bottom: 40px;
+}
+.first-block-about{
+  background: url("/assets/main2.jpg");
+  background-size: cover;
+}
+@media(max-width: 991px){
+  .first-block-about{
+    background: none;
+
+  }
+}
