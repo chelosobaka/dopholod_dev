@@ -3,6 +3,7 @@ ActiveAdmin.setup do |config|
 config.namespace :admin do |admin|
   admin.build_menu do |menu|
     menu.add id: "catalog", label: proc{ I18n.t("active_admin.catalog") }
+    menu.add id: "gallery", label: proc{ I18n.t("active_admin.gallery") }
   end
 end
   # == Site Title

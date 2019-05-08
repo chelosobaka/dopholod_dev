@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_13_145510) do
+ActiveRecord::Schema.define(version: 2019_04_27_151624) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -93,6 +93,21 @@ ActiveRecord::Schema.define(version: 2019_03_13_145510) do
     t.string "external_dimensions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "work_objects", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "work_photos", force: :cascade do |t|
+    t.string "image_link"
+    t.string "image"
+    t.integer "work_object_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["work_object_id"], name: "index_work_photos_on_work_object_id"
   end
 
 end

@@ -1,5 +1,5 @@
 ActiveAdmin.register Monoblock do
-config.filters = false
+  config.filters = false
 
   menu parent: "Catalog", label: proc{ I18n.t("active_admin.monoblocks") }
 
@@ -75,7 +75,7 @@ config.filters = false
       row "Размеры в упаковке", :packed_sizes do
         "#{monoblock.packed_sizes} мм"
       end
-      row "cells", :cells do
+      row "Камеры", :cells do
         monoblock.cells.map{ |p| link_to p.title, admin_cell_path(p)}.join(', ').html_safe
       end
       row :created_at

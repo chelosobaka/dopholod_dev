@@ -1,5 +1,5 @@
 ActiveAdmin.register Split do
-config.filters = false
+  config.filters = false
 
   menu parent: "Catalog", label: proc{ I18n.t("active_admin.splits") }
 

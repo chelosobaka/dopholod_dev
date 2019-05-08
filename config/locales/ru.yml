@@ -16,11 +16,32 @@ ru:
       cell: "Камеры"
       monoblock: "Моноблок"
       split: "Сплит-система"
+      work_photo: "Фото объекта"
+      work_object: "Рабочий объект"
     attributes:
       product:
         title: "Название"
         price: "Цена"
         actable_type: "Тип продукта"
+      work_photo:
+        image_link: "Ссылка на фото"
+        image: "Фото"
+        work_object: "Рабочий объект"
+        created_at: "Создано"
+        updated_at: "Изменено"
+      work_object:
+        title: "Название"
+        created_at: "Создано"
+        updated_at: "Изменено"
+      cell:
+        created_at: "Создано"
+        updated_at: "Изменено"
+      monoblock:
+        created_at: "Создано"
+        updated_at: "Изменено"
+      split:
+        created_at: "Создано"
+        updated_at: "Изменено"
   formtastic:
     :yes: 'Да'
     :no: 'Нет'
@@ -45,6 +66,9 @@ ru:
     split: "Сплит-система"
     splits: "Сплит-системы"
     catalog: "Каталог"
+    work_photo: "Фото объекта"
+    work_object: "Рабочий объект"
+    gallery: "Галерея"
     detail: "Подробнее"
     dashboard: "Панель управления"
     dashboard_welcome:

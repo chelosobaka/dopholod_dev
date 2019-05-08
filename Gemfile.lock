@@ -293,6 +293,7 @@ DEPENDENCIES
   chromedriver-helper
   devise
   devise-i18n
+  formtastic (~> 3.0)
   jbuilder (~> 2.5)
   jquery-rails
   kaminari

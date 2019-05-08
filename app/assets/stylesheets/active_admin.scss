@@ -8,6 +8,7 @@
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
+
 @import "active_admin/mixins";
 @import "active_admin/base";
 @import "wigu/active_admin_theme";
@@ -15,3 +16,19 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+
+.col-4{
+	max-width: 25%;
+	-ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+}
+
+.row{
+	display: flex;
+	-webkit-flex-flow: row wrap;
+    flex: 0;
+}
+
+.photo{
+	margin:10px;
+}
