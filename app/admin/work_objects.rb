@@ -10,9 +10,8 @@ ActiveAdmin.register WorkObject do
         format.html
       end
     end
-
-
   end
+
   show do
     div class: 'row' do
       work_object.work_photos.each do |photo|
@@ -30,11 +29,11 @@ ActiveAdmin.register WorkObject do
       end
     end
   end
+
   form do |f|
     f.inputs do
       f.input :title
     end
-
     f.inputs do
       f.has_many :work_photos, :allow_destroy => true, :new_record => true do |photo|
         photo.input :image_link
@@ -43,4 +42,5 @@ ActiveAdmin.register WorkObject do
     end
     f.actions
   end
+
 end
