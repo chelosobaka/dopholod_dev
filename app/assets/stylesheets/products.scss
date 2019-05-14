@@ -217,6 +217,8 @@
   margin-left: 60.75px;
   margin-right: 60.75px;
 }
+
+
 @media(max-width: 991px){
   .no-carousel{
     margin-left: 0px;
@@ -270,32 +272,31 @@
 
  .active > div { display:none; }
  .active > div:first-child { display:block; }
-
 /*xs*/
 @media (max-width: 767px) {
-  .carousel-inner .active.left { left: -100%; }
-  .carousel-inner .active.right { left: 100%; }
-  .carousel-inner .next        { left:  100%; }
-  .carousel-inner .prev        { left: -100%; }
+  .carousel-inner-cust .active.left { left: -100%; }
+  .carousel-inner-cust .active.right { left: 100%; }
+  .carousel-inner-cust .next        { left:  100%; }
+  .carousel-inner-cust .prev        { left: -100%; }
   .carousel-col                { width: 100%; }
 }
 
 /*sm*/
 @media (min-width: 768px) and (max-width: 1449px) {
-  .carousel-inner .active.left { left: -50%; }
-  .carousel-inner .active.right { left: 50%; }
-  .carousel-inner .next        { left:  50%; }
-  .carousel-inner .prev        { left: -50%; }
+  .carousel-inner-cust .active.left { left: -50%; }
+  .carousel-inner-cust .active.right { left: 50%; }
+  .carousel-inner-cust .next        { left:  50%; }
+  .carousel-inner-cust .prev        { left: -50%; }
   .carousel-col                { width: 50%; }
   .active > div:first-child + div { display:block; }
 }
 
 /*md*/
 @media (min-width: 1450px) and (max-width: 1799px) {
-  .carousel-inner .active.left { left: -33%; }
-  .carousel-inner .active.right { left: 33%; }
-  .carousel-inner .next        { left:  33%; }
-  .carousel-inner .prev        { left: -33%; }
+  .carousel-inner-cust .active.left { left: -33%; }
+  .carousel-inner-cust .active.right { left: 33%; }
+  .carousel-inner-cust .next        { left:  33%; }
+  .carousel-inner-cust .prev        { left: -33%; }
   .carousel-col                { width: 33%; }
   .active > div:first-child + div { display:block; }
   .active > div:first-child + div + div { display:block; }
@@ -303,13 +304,13 @@
 
 /*lg*/
 @media (min-width: 1800px) {
-  .carousel-inner .active.left { left: -25%; }
-  .carousel-inner .active.right{ left:  25%; }
-  .carousel-inner .next        { left:  25%; }
-  .carousel-inner .prev        { left: -25%; }
+  .carousel-inner-cust .active.left { left: -25%; }
+  .carousel-inner-cust .active.right{ left:  25%; }
+  .carousel-inner-cust .next        { left:  25%; }
+  .carousel-inner-cust .prev        { left: -25%; }
   .carousel-col                { width: 25%; }
   .active > div:first-child + div { display:block; }
-  .active > div:first-child + div + div { display:block; }
+  .active> div:first-child + div + div { display:block; }
   .active > div:first-child + div + div + div { display:block; }
 }
 
