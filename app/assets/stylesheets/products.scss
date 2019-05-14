@@ -1,3 +1,19 @@
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.nopadding{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
 .product-container{
   min-height: calc(100vh - 197px);
   position: relative;
