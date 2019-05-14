@@ -14,17 +14,15 @@
 					<div class="container">
 						<div id="myCarousel<%= object.id %>" class="carousel slide" data-ride="carousel" data-interval="false">
 
-
-						<ol class="carousel-indicators">
-							<% object.work_photos.count.times do |index| %>
-				      	<% if index == 0 %>
-									<li data-target="#myCarousel<%= object.id %>" data-slide-to="<%=index%>" class="active"></li>
-								<% else %>
-								  <li data-target="#myCarousel<%= object.id %>" data-slide-to="<%=index%>"></li>
-								<% end %>
-				      <% end %>
-				    </ol>
-
+							<ol class="carousel-indicators">
+								<% object.work_photos.count.times do |index| %>
+					      	<% if index == 0 %>
+										<li data-target="#myCarousel<%= object.id %>" data-slide-to="<%=index%>" class="active"></li>
+									<% else %>
+									  <li data-target="#myCarousel<%= object.id %>" data-slide-to="<%=index%>"></li>
+									<% end %>
+					      <% end %>
+					    </ol>
 
 							<div class="carousel-inner">
 						  	<% object.work_photos.each_with_index do |photo, index| %>
