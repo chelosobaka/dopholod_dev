@@ -1,0 +1,20 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+  Static version of css will use Glyphicons sprites by default
+  =require twitter-bootstrap-static/sprites
+*/
+
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
