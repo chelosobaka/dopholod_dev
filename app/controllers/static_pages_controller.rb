@@ -8,4 +8,6 @@ class StaticPagesController < ApplicationController
   def our_work
     @work_object = WorkObject.all
   end
+  def services
+  end
 end

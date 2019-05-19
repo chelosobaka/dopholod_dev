@@ -1,62 +1,73 @@
-<% if additional.count <= 4 %>
-  <div class="row">
-    <div class="col-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 no-carousel">
-      <% additional.each do |item| %>
-        <div class="item">
-          <div class="carousel-col">
-            <div class="block">
-              <div class="product-image">
-                <%= image_tag(product_avatar(item), size: "140x200") %>
-              </div><!-- product-image -->
-              <div class="product-title product-title-center">
-                <h3><%=link_to item.title, eval("#{item.class.to_s.downcase}_path(item.id)")%></h3>
-              </div><!-- product-title product-title-center -->
-            </div><!-- block -->
-          </div><!-- carousel-col -->
-        </div><!-- item -->
-      <% end %>
-    </div><!-- col-md-11 no-carouse -->
-  </div><!-- row -->
-<% else %>
-<!-- carousel -->
-  <div class="row">
-    <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 col-centered">
-      <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="4000">
-        <div class="carousel-inner col-centered carousel-inner-cust">
-          <% additional.each_with_index do |item, index| %>
-            <% if index == 0 %>
-              <div class="item active">
-            <% else %>
-              <div class="item">
-            <%end%>
-            <div class="carousel-col">
-              <div class="block">
-                <div class="product-image">
-                  <%= image_tag(product_avatar(item), size: "140x200") %>
-                </div>
-                <div class="product-title product-title-center">
-                  <h3><%= link_to item.title, eval("#{item.class.to_s.downcase}_path(item.id)")%></h3>
+<% if additional.present? %>
+  <div class="additional-products">
+      <div class="model-title">
+        <% if @product.actable_type == "Cell" %>
+          <h3>Агрегаты подходят к этой камере:</h3>
+        <% elsif @product.actable_type == "Split" || @product.actable_type == "Monoblock"%>
+          <h3>Камеры подходят к этому агрегату:</h3>
+        <% end %>
+      </div>
+    <% if additional.count <= 4 %>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 no-carousel">
+          <% additional.each do |item| %>
+            <div class="item">
+              <div class="carousel-col">
+                <div class="block">
+                  <div class="product-image">
+                    <%= image_tag(product_avatar(item), size: "140x200") %>
+                  </div><!-- product-image -->
+                  <div class="product-title product-title-center">
+                    <h3><%=link_to item.title, eval("#{item.class.to_s.downcase}_path(item.id)")%></h3>
+                  </div><!-- product-title product-title-center -->
+                </div><!-- block -->
+              </div><!-- carousel-col -->
+            </div><!-- item -->
+          <% end %>
+        </div><!-- col-md-11 no-carouse -->
+      </div><!-- row -->
+    <% else %>
+    <!-- carousel -->
+      <div class="row">
+        <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 col-centered">
+          <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="4000">
+            <div class="carousel-inner col-centered carousel-inner-cust">
+              <% additional.each_with_index do |item, index| %>
+                <% if index == 0 %>
+                  <div class="item active">
+                <% else %>
+                  <div class="item">
+                <%end%>
+                <div class="carousel-col">
+                  <div class="block">
+                    <div class="product-image">
+                      <%= image_tag(product_avatar(item), size: "140x200") %>
+                    </div>
+                    <div class="product-title product-title-center">
+                      <h3><%= link_to item.title, eval("#{item.class.to_s.downcase}_path(item.id)")%></h3>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <% end %>
             </div>
-          </div>
-          <% end %>
-        </div>
-        <!-- Controls -->
-        <div class="left carousel-control">
-          <a href="#carousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </div><!-- left carousel-control -->
-        <div class="right carousel-control">
-          <a href="#carousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div><!-- right carousel-control -->
-      </div><!-- carousel slide -->
-    </div><!-- col-md-11 col-centered -->
-  </div><!-- row -->
+            <!-- Controls -->
+            <div class="left carousel-control">
+              <a href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </div><!-- left carousel-control -->
+            <div class="right carousel-control">
+              <a href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div><!-- right carousel-control -->
+          </div><!-- carousel slide -->
+        </div><!-- col-md-11 col-centered -->
+      </div><!-- row -->
 
-<%end%>
+    <%end%>
+  </div>
+<% end %>

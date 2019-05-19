@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "contact", to: "static_pages#contact"
   get "about", to: "static_pages#about"
   get "our_work", to: "static_pages#our_work"
+  get "services", to: "static_pages#services"
 
   resources :splits, only: [:index, :show]
   resources :monoblocks, only: [:index, :show]
